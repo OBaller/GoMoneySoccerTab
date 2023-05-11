@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--League Details Parent View Controller-->
+        <scene sceneID="t3J-Zc-hcm">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="LeagueDetailsParentViewController" id="5ct-pI-MlO" customClass="LeagueDetailsParentViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZUH-tw-ygl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="amu-3O-Zpz" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="59" width="393" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="aiZ-zI-SwU"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KNN-08-8hJ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-tL-J8g">
+                                <rect key="frame" x="0.0" y="123" width="393" height="729"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Eu-7n-khk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="amu-3O-Zpz" firstAttribute="leading" secondItem="7Eu-7n-khk" secondAttribute="leading" id="0us-95-nJO"/>
+                            <constraint firstAttribute="bottom" secondItem="HVi-tL-J8g" secondAttribute="bottom" id="OA3-bA-ujm"/>
+                            <constraint firstAttribute="bottom" secondItem="HVi-tL-J8g" secondAttribute="bottom" id="QEv-OP-Yb8"/>
+                            <constraint firstItem="HVi-tL-J8g" firstAttribute="trailing" secondItem="7Eu-7n-khk" secondAttribute="trailing" id="YMw-AN-Zay"/>
+                            <constraint firstItem="amu-3O-Zpz" firstAttribute="top" secondItem="7Eu-7n-khk" secondAttribute="top" id="j6f-lY-RoC"/>
+                            <constraint firstItem="amu-3O-Zpz" firstAttribute="trailing" secondItem="7Eu-7n-khk" secondAttribute="trailing" id="pNg-vA-ZPe"/>
+                            <constraint firstItem="HVi-tL-J8g" firstAttribute="leading" secondItem="7Eu-7n-khk" secondAttribute="leading" id="tDC-RO-SQX"/>
+                            <constraint firstItem="HVi-tL-J8g" firstAttribute="top" secondItem="amu-3O-Zpz" secondAttribute="bottom" id="xvM-dM-sMh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBarView" destination="amu-3O-Zpz" id="75M-AC-FXt"/>
+                        <outlet property="containerView" destination="HVi-tL-J8g" id="POG-os-ZF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUA-DT-e1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588.40579710144937" y="45.535714285714285"/>
+        </scene>
+        <!--League Table View Controller-->
+        <scene sceneID="pLN-vv-Ixd">
+            <objects>
+                <viewController storyboardIdentifier="table" id="ZdQ-2u-EfE" customClass="LeagueTableViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mm8-Qh-SDN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRW-6M-NBO">
+                                <rect key="frame" x="176" y="415.66666666666669" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h3l-ye-git"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rRW-6M-NBO" firstAttribute="centerY" secondItem="Mm8-Qh-SDN" secondAttribute="centerY" id="FDe-xM-XUM"/>
+                            <constraint firstItem="rRW-6M-NBO" firstAttribute="centerX" secondItem="Mm8-Qh-SDN" secondAttribute="centerX" id="K1f-2d-kzb"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLl-wX-glm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="97" y="46"/>
+        </scene>
+        <!--League Fixtures View Controller-->
+        <scene sceneID="FHo-2e-3ea">
+            <objects>
+                <viewController storyboardIdentifier="fixtures" id="un9-2k-FlN" customClass="LeagueFixturesViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2d-fu-jT8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fixtures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykj-dD-B95">
+                                <rect key="frame" x="166" y="415.66666666666669" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KaM-ZH-VVN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ykj-dD-B95" firstAttribute="centerY" secondItem="j2d-fu-jT8" secondAttribute="centerY" id="2FR-D2-piD"/>
+                            <constraint firstItem="ykj-dD-B95" firstAttribute="centerX" secondItem="j2d-fu-jT8" secondAttribute="centerX" id="pQG-In-Zyi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTI-nO-gFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="46"/>
+        </scene>
+        <!--League Teams View Controller-->
+        <scene sceneID="kgY-Ga-MnW">
+            <objects>
+                <viewController storyboardIdentifier="team" id="3dD-CX-tge" customClass="LeagueTeamsViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K8p-0i-coE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-KP-QRa">
+                                <rect key="frame" x="171.66666666666666" y="415.66666666666669" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8ui-eb-790"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gej-KP-QRa" firstAttribute="centerX" secondItem="K8p-0i-coE" secondAttribute="centerX" id="EHR-Ug-HoP"/>
+                            <constraint firstItem="Gej-KP-QRa" firstAttribute="centerY" secondItem="K8p-0i-coE" secondAttribute="centerY" id="iQe-QD-kxW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dy4-eS-lyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="46"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

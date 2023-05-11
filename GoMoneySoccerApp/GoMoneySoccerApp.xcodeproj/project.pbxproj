@@ -13,9 +13,13 @@
 		C5BED4E72A0D76C20058DEA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BED4E52A0D76C20058DEA8 /* Main.storyboard */; };
 		C5BED4E92A0D76C40058DEA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BED4E82A0D76C40058DEA8 /* Assets.xcassets */; };
 		C5BED4EC2A0D76C40058DEA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BED4EA2A0D76C40058DEA8 /* LaunchScreen.storyboard */; };
+		C5BED4FC2A0D98720058DEA8 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = C5BED4FB2A0D98720058DEA8 /* SDWebImageSVGCoder */; };
+		FE82112DF1620EF19EC99BAB /* Pods_GoMoneySoccerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE2600CE85C1B9373B7F1D8 /* Pods_GoMoneySoccerApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045082C1530FB1D74D318661 /* Pods-GoMoneySoccerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoMoneySoccerApp.release.xcconfig"; path = "Target Support Files/Pods-GoMoneySoccerApp/Pods-GoMoneySoccerApp.release.xcconfig"; sourceTree = "<group>"; };
+		3EE2600CE85C1B9373B7F1D8 /* Pods_GoMoneySoccerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoMoneySoccerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BED4DC2A0D76C20058DEA8 /* GoMoneySoccerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoneySoccerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BED4DF2A0D76C20058DEA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5BED4E12A0D76C20058DEA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,7 @@
 		C5BED4E82A0D76C40058DEA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5BED4EB2A0D76C40058DEA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5BED4ED2A0D76C40058DEA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEBEB6C02AAB27474D2476A /* Pods-GoMoneySoccerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoMoneySoccerApp.debug.xcconfig"; path = "Target Support Files/Pods-GoMoneySoccerApp/Pods-GoMoneySoccerApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5BED4FC2A0D98720058DEA8 /* SDWebImageSVGCoder in Frameworks */,
+				FE82112DF1620EF19EC99BAB /* Pods_GoMoneySoccerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C127F7D8F71DAFFA5C7AF19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EE2600CE85C1B9373B7F1D8 /* Pods_GoMoneySoccerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4E6AB3DC9E208E419771F2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBEBEB6C02AAB27474D2476A /* Pods-GoMoneySoccerApp.debug.xcconfig */,
+				045082C1530FB1D74D318661 /* Pods-GoMoneySoccerApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C5BED4D32A0D76C20058DEA8 = {
 			isa = PBXGroup;
 			children = (
 				C5BED4DE2A0D76C20058DEA8 /* GoMoneySoccerApp */,
 				C5BED4DD2A0D76C20058DEA8 /* Products */,
+				A4E6AB3DC9E208E419771F2F /* Pods */,
+				4C127F7D8F71DAFFA5C7AF19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +83,13 @@
 		C5BED4DE2A0D76C20058DEA8 /* GoMoneySoccerApp */ = {
 			isa = PBXGroup;
 			children = (
-				C5BED4DF2A0D76C20058DEA8 /* AppDelegate.swift */,
-				C5BED4E12A0D76C20058DEA8 /* SceneDelegate.swift */,
+				C5BED4F92A0D97350058DEA8 /* NetworkService */,
+				C5BED4F82A0D97260058DEA8 /* Model */,
+				C5BED4F72A0D971C0058DEA8 /* Extension */,
+				C5BED4F62A0D96FD0058DEA8 /* BaseTabBarController */,
+				C5BED4F52A0D95040058DEA8 /* TodayFixtures */,
+				C5BED4F42A0D94E40058DEA8 /* Competitions */,
+				C5BED4F32A0D94820058DEA8 /* Delegates */,
 				C5BED4E32A0D76C20058DEA8 /* ViewController.swift */,
 				C5BED4E52A0D76C20058DEA8 /* Main.storyboard */,
 				C5BED4E82A0D76C40058DEA8 /* Assets.xcassets */,
@@ -67,6 +99,57 @@
 			path = GoMoneySoccerApp;
 			sourceTree = "<group>";
 		};
+		C5BED4F32A0D94820058DEA8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C5BED4DF2A0D76C20058DEA8 /* AppDelegate.swift */,
+				C5BED4E12A0D76C20058DEA8 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C5BED4F42A0D94E40058DEA8 /* Competitions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Competitions;
+			sourceTree = "<group>";
+		};
+		C5BED4F52A0D95040058DEA8 /* TodayFixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TodayFixtures;
+			sourceTree = "<group>";
+		};
+		C5BED4F62A0D96FD0058DEA8 /* BaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseTabBarController;
+			sourceTree = "<group>";
+		};
+		C5BED4F72A0D971C0058DEA8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C5BED4F82A0D97260058DEA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5BED4F92A0D97350058DEA8 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +157,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5BED4F02A0D76C40058DEA8 /* Build configuration list for PBXNativeTarget "GoMoneySoccerApp" */;
 			buildPhases = (
+				DB9B94FC8425097B77E15481 /* [CP] Check Pods Manifest.lock */,
 				C5BED4D82A0D76C20058DEA8 /* Sources */,
 				C5BED4D92A0D76C20058DEA8 /* Frameworks */,
 				C5BED4DA2A0D76C20058DEA8 /* Resources */,
+				7D66F27CBE8D52D0BBEADC07 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GoMoneySoccerApp;
+			packageProductDependencies = (
+				C5BED4FB2A0D98720058DEA8 /* SDWebImageSVGCoder */,
+			);
 			productName = GoMoneySoccerApp;
 			productReference = C5BED4DC2A0D76C20058DEA8 /* GoMoneySoccerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +199,9 @@
 				Base,
 			);
 			mainGroup = C5BED4D32A0D76C20058DEA8;
+			packageReferences = (
+				C5BED4FA2A0D98720058DEA8 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */,
+			);
 			productRefGroup = C5BED4DD2A0D76C20058DEA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +223,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D66F27CBE8D52D0BBEADC07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoMoneySoccerApp/Pods-GoMoneySoccerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoMoneySoccerApp/Pods-GoMoneySoccerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoMoneySoccerApp/Pods-GoMoneySoccerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB9B94FC8425097B77E15481 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoMoneySoccerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5BED4D82A0D76C20058DEA8 /* Sources */ = {
@@ -282,6 +415,7 @@
 		};
 		C5BED4F12A0D76C40058DEA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBEBEB6C02AAB27474D2476A /* Pods-GoMoneySoccerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +444,7 @@
 		};
 		C5BED4F22A0D76C40058DEA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045082C1530FB1D74D318661 /* Pods-GoMoneySoccerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +493,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5BED4FA2A0D98720058DEA8 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5BED4FB2A0D98720058DEA8 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5BED4FA2A0D98720058DEA8 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */;
+			productName = SDWebImageSVGCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5BED4D42A0D76C20058DEA8 /* Project object */;
 }
